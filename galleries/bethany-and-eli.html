@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bethany and Eli</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <style>
+    .gallery-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .gallery-title {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+        <nav class="navigation">
+            <a href="../galleries.html">GALLERIES</a>
+            <a href="../investment.html">INVESTMENT</a>
+            <a href="../contact.html">CONTACT</a>
+        </nav>
+
+        <div class="homeLink">
+            <a href="../index.html" class="mainName">Arianna M.</a>
+            <p>PHOTOGRAPHY</p>
+        </div>
+
+        <div class="getInContact">
+            <a href="https://www.facebook.com/ariannamihuphotography" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/ariannamckenziephotography/" class="fa fa-instagram" target="_blank"></a>
+            <a href="../contact.html" class="reachOut">REACH OUT</a>
+        </div>
+    </header>
+
+<div class="gallery-container">
+  <h1 id="gallery-title" class="gallery-title">Loading...</h1>
+  <div id="image-grid" class="image-grid"></div>
+</div>
+
+<script>
+  fetch('bethany-and-eli.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('gallery-title').textContent = data.title;
+
+      const grid = document.getElementById('image-grid');
+      const encodedFolder = encodeURI(data.folder); // handles spaces
+      data.images.forEach(filename => {
+        const img = document.createElement('img');
+        img.src = `${encodedFolder}/${filename}`;
+        img.alt = `${data.title} - ${filename}`;
+        grid.appendChild(img);
+      });
+    })
+    .catch(error => {
+      document.getElementById('gallery-title').textContent = "Failed to load gallery";
+      console.error('Error loading gallery:', error);
+    });
+</script>
+
+<script src="../scripts/hamburger.js"></script>
+
+</body>
+</html>
