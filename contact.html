@@ -6,7 +6,7 @@
     <title>Arianna M Photography | Home</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -61,7 +61,7 @@
             Have any questions about my services? I would love to hear from you. Please complete the form below, and I aim to get back to you within 48 hours.
             </p>
 
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeVQQX2nHXdTnV3Fivq-P7pgZCJ1MZ7v9NS4_z63ztOBGER8Q/formResponse" method="POST" target="_blank">
+        <form id="contact-form">
             <div class="form-group">
                 <label for="full-name">Name <span>(required)</span></label>
                 <input type="text" id="full-name" name="entry.307195148" placeholder="Full Name" required>
@@ -93,5 +93,25 @@
     </main>
 
     <script src="scripts/hamburger.js"></script>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent normal form submission
+
+            const form = e.target;
+
+            const formData = new FormData(form);
+
+            fetch("https://docs.google.com/forms/d/e/1FAIpQLSeVQQX2nHXdTnV3Fivq-P7pgZCJ1MZ7v9NS4_z63ztOBGER8Q/formResponse", {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+            }).then(() => {
+            window.location.href = "send-email.html"; // Redirect to your custom thank-you page
+            }).catch((error) => {
+            alert("There was an issue submitting the form. Please try again later.");
+            });
+        });
+    </script>
 </body>
 </html>
