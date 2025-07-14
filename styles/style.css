@@ -324,6 +324,26 @@ header{
   font-weight: bold;
 }
 
+.policies-section h1{
+  font-size: 2.5em;
+}
+
+.policies-section h1, .policies-section h2{
+  font-family: "Bodoni Moda", serif;
+}
+
+.about {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.policy-card {
+  border-left: 4px solid #d6a77a;
+  padding: 20px;
+  margin-top: 20px;
+}
 
 
 
@@ -346,7 +366,7 @@ header{
   z-index: 1001;
 }
 
-@media (max-width: 515px) {
+@media (max-width: 520px) {
   .navigation {
     display: none;
     flex-direction: column;

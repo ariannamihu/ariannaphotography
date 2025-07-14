@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arianna M Photography | Home</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+    <nav class="navigation">
+      <a href="galleries.html">GALLERIES</a>
+      <a href="investment.html">INVESTMENT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="about.html">ABOUT</a>
+
+    </nav>
+
+    <div class="homeLink">
+      <a href="index.html" class="mainName">Arianna M.</a>
+      <p>PHOTOGRAPHY</p>
+    </div>
+
+    <div class="getInContact">
+      <a href="https://www.facebook.com/ariannamihuphotography" class="fa fa-facebook" target="_blank"></a>
+      <a href="https://www.instagram.com/ariannamckenziephotography/" class="fa fa-instagram" target="_blank"></a>
+      <a href="contact.html" class="reachOut">REACH OUT</a>
+    </div>
+  </header>
+  
+  <main class="about">
+    <section class="policies-section">
+      <h1>Policies</h1>
+
+      <div class="policy-card">
+        <h2>Turnaround Time</h2>
+        <p><strong>Couples/Portrait Sessions:</strong> Delivered within 2 weeks of the shoot.<br />
+        Optional: $30 rush fee for 1-week delivery.</p>
+        <p><strong>Weddings:</strong> Delivered within 3–4 weeks.</p>
+      </div>
+
+      <div class="policy-card">
+        <h2>Payment</h2>
+        <p>30% non-refundable retainer due at booking.<br />
+        Remaining balance is due on the day of the session or wedding.</p>
+        <p><strong>Travel:</strong> Included in Utah and Salt Lake County.</p>
+      </div>
+
+      <div class="policy-card">
+        <h2>Your Photos</h2>
+        <p>Each session includes 80+ high-quality, edited images.<br />
+        Unlimited downloads are available.<br />
+        Online gallery access lasts 6 months from delivery.</p>
+      </div>
+
+      <div class="policy-card">
+        <h2>Weddings</h2>
+        <p>A signed contract and a 30% retainer are required to officially reserve your wedding date.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".navigation");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
