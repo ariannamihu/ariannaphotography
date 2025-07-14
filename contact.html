@@ -1,117 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arianna M Photography | Home</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arianna M Photography | Home</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+  <header>
+    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
 
-        <nav class="navigation">
-            <a href="galleries.html">GALLERIES</a>
-            <a href="investment.html">INVESTMENT</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
+    <nav class="navigation">
+      <a href="galleries.html">GALLERIES</a>
+      <a href="investment.html">INVESTMENT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
 
-        <div class="homeLink">
-            <a href="index.html" class="mainName">Arianna M.</a>
-            <p>PHOTOGRAPHY</p>
+    <div class="homeLink">
+      <a href="index.html" class="mainName">Arianna M.</a>
+      <p>PHOTOGRAPHY</p>
+    </div>
+
+    <div class="getInContact">
+      <a href="https://www.facebook.com/ariannamihuphotography" class="fa fa-facebook" target="_blank"></a>
+      <a href="https://www.instagram.com/ariannamckenziephotography/" class="fa fa-instagram" target="_blank"></a>
+      <a href="contact.html" class="reachOut">REACH OUT</a>
+    </div>
+  </header>
+
+  <main class="contact">
+    <img class="chatImg" src="images/bd100.webp" alt="">
+    <div class="form-container">
+      <h1 class="chat">Let's Chat.</h1>
+      <p>
+        Have any questions about my services? I would love to hear from you. Please complete the form below, and I aim to get back to you within 48 hours.
+      </p>
+
+      <form id="contact-form">
+        <div class="form-group">
+            <label for="full-name">Name <span>(required)</span></label>
+            <input type="text" id="full-name" name="name" placeholder="Full Name" required>
         </div>
 
-        <div class="getInContact">
-            <a href="https://www.facebook.com/ariannamihuphotography" class="fa fa-facebook" target="_blank"></a>
-            <a href="https://www.instagram.com/ariannamckenziephotography/" class="fa fa-instagram" target="_blank"></a>
-            <a href="contact.html" class="reachOut">REACH OUT</a>
+        <div class="form-group">
+            <label for="email">Email <span>(required)</span></label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
         </div>
-    </header>
 
-    <!-- <main class="contact">
-        <img class="chatImg" src="images/bd100.webp" alt="">
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeVQQX2nHXdTnV3Fivq-P7pgZCJ1MZ7v9NS4_z63ztOBGER8Q/formResponse" method="POST" target="_blank">
-            <label for="name">Full Name*</label>
-            <input type="text" name="entry.307195148" id="name" required placeholder="Your full name" />
-
-            <label for="email">Email Address*</label>
-            <input type="email" name="entry.1307191473" id="email" required placeholder="you@example.com" />
-
+        <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" name="entry.2099219782" id="phone" placeholder="(123) 456-7890" />
-
-            <label for="wedding-date">Wedding Date</label>
-            <input type="date" name="entry.564695735" id="wedding-date" />
-
-            <label for="message">Message*</label>
-            <textarea name="entry.2040852559" id="message" required placeholder="Tell me about your wedding plans!"></textarea>
-
-            <button type="submit">Send Inquiry</button>
-        </form> -->
-        
-    <!-- </main> -->
-    <main class="contact">
-        <img class="chatImg" src="images/bd100.webp" alt="">
-        <div class="form-container">
-            <h1 class="chat">Let's Chat.</h1>
-            <p>
-            Have any questions about my services? I would love to hear from you. Please complete the form below, and I aim to get back to you within 48 hours.
-            </p>
-
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="full-name">Name <span>(required)</span></label>
-                <input type="text" id="full-name" name="entry.307195148" placeholder="Full Name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email <span>(required)</span></label>
-                <input type="email" id="email" name="entry.1307191473" placeholder="Your Email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="entry.2099219782" placeholder="(123) 456-7890">
-            </div>
-
-            <div class="form-group">
-                <label for="wedding-date">Wedding Date</label>
-                <input type="date" id="wedding-date" name="entry.564695735">
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message <span>(required)</span></label>
-                <textarea id="message" name="entry.2040852559" placeholder="Your Message" required></textarea>
-            </div>
-
-            <button type="submit">Submit</button>
-            </form>
+            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
         </div>
-    </main>
 
-    <script src="scripts/hamburger.js"></script>
+        <div class="form-group">
+            <label for="wedding-date">Wedding Date</label>
+            <input type="date" id="wedding-date" name="wedding-date">
+        </div>
 
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent normal form submission
+        <div class="form-group">
+            <label for="message">Message <span>(required)</span></label>
+            <textarea id="message" name="message" placeholder="Tell me about your wedding plans!" required></textarea>
+        </div>
 
-            const form = e.target;
+        <button type="submit">Submit</button>
+        </form>
 
-            const formData = new FormData(form);
+    </div>
+  </main>
 
-            fetch("https://docs.google.com/forms/d/e/1FAIpQLSeVQQX2nHXdTnV3Fivq-P7pgZCJ1MZ7v9NS4_z63ztOBGER8Q/formResponse", {
-            method: "POST",
-            mode: "no-cors",
-            body: formData,
-            }).then(() => {
-            window.location.href = "send-email.html"; // Redirect to your custom thank-you page
-            }).catch((error) => {
-            alert("There was an issue submitting the form. Please try again later.");
-            });
-        });
-    </script>
+  <script src="scripts/hamburger.js"></script>
+
+  <script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formspree.io/f/xzzbqnll", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json'
+      },
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        window.location.href = "send-email.html"; // ✅ redirect to your thank-you page
+      } else {
+        alert("There was a problem submitting the form. Please try again later.");
+      }
+    })
+    .catch(error => {
+      alert("Submission failed. Please check your connection and try again.");
+    });
+  });
+</script>
+
 </body>
 </html>
